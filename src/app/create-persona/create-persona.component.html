@@ -1,0 +1,50 @@
+<h3>Crear Empleado</h3>
+<div [hidden]="creado" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Dni: </label>
+            <input type="text" class="form-control" id="dni" required [(ngModel)]="persona.dni" name="firstdniName">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Nombre: </label>
+            <input type="text" class="form-control" id="nombre" required [(ngModel)]="persona.nombre" name="nombre">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Apellido: </label>
+            <input type="text" class="form-control" id="apellido" required [(ngModel)]="persona.apellido" name="apellido">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Ciudad: </label>
+            <input type="text" class="form-control" id="ciudad" required [(ngModel)]="persona.ciudad" name="ciudad">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Direccion Calle: </label>
+            <input type="text" class="form-control" id="direccioncalle" required [(ngModel)]="persona.direccioncalle" name="direccioncalle">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Direccion Num: </label>
+            <input type="number" class="form-control" id="direccionnum" required [(ngModel)]="persona.direccionnum" name="direccionnum">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Telefono: </label>
+            <input type="text" class="form-control" id="telefono" required [(ngModel)]="persona.telefono" name="telefono">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Varon: </label>
+            <input type="number" class="form-control" id="varon" required [(ngModel)]="persona.varon" name="varon">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+<div [hidden]="!creado">
+    <h4>You submitted successfully!</h4>
+</div>
