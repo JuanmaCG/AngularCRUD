@@ -17,9 +17,6 @@ export class CreatePersonaComponent implements OnInit {
   ngOnInit() {
   }
 
-  newPersona() : void{
-    this.persona = new Persona();
-  }
 
   save() {
     this.personaService.createPersona(this.persona)

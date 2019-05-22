@@ -14,6 +14,7 @@
                   <th>DireccionNum</th>
                   <th>Telefono</th>
                   <th>Varon</th>
+                  <th>Buscar</th>
               </tr>
           </thead>
           <tbody>
@@ -26,6 +27,7 @@
                   <td>{{persona.direccionnum}}</td>
                   <td>{{persona.telefono}}</td>
                   <td>{{persona.varon}}</td>
+                  <td><a [routerLink]="[ '/personaBuscada', persona.dni ]"><button>Datos</button></a></td>
                   <td><button (click)="deletePersona(persona.dni)">Delete</button></td>
               </tr>
           </tbody>

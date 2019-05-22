@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PersonaService } from "../persona.service";
 import { Observable } from 'rxjs';
 import { Persona } from "../persona";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-persona-list',
@@ -12,7 +13,8 @@ export class PersonaListComponent implements OnInit {
 
   personas : Observable<Persona[]>
 
-  constructor(private personaService : PersonaService) { }
+
+  constructor(private personaService : PersonaService, private router : Router) { }
 
   ngOnInit() {
     this.loadPersonas();
@@ -31,5 +33,7 @@ export class PersonaListComponent implements OnInit {
         },
         error => console.log(error));
   }
+
+  
 
 }

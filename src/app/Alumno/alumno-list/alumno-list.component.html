@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <h1>Los Empollones</h1>
+  </div>
+  <div class="panel-body">
+      <table class="table table-striped table-bordered">
+          <thead>
+              <tr>
+                  <th>Dni</th>
+                  <th>Id Alumno</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let alumno of alumnos | async">
+                  <td>{{alumno.dni}}</td>
+                  <td>{{alumno.idalumno}}</td>
+                  <td><button (click)="deleteAlumno(alumno.dni)">Delete</button></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
