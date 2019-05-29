@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateAlumnoComponent } from './Alumno/create-alumno/create-alumno.component';
 import { AlumnoListComponent } from './Alumno/alumno-list/alumno-list.component';
 import { ReadPersonaComponent } from './Persona/read-persona/read-persona.component';
+import { AlumnoDetailsComponent } from './Alumno/alumno-details/alumno-details.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ReadPersonaComponent } from './Persona/read-persona/read-persona.compon
     CreateAlumnoComponent,
     AlumnoListComponent,
     ReadPersonaComponent,
+    AlumnoDetailsComponent,
+
   ],
   imports: [
     BrowserModule,

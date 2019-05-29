@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 export class ReadPersonaComponent implements OnInit {
 
   persona : Object = new Persona;
-  
+
 
   constructor(private route : ActivatedRoute, private personaService : PersonaService, private location : Location) {  }
 
@@ -27,6 +27,17 @@ export class ReadPersonaComponent implements OnInit {
 
   goBack() {
     this.location.back();
+  }
+
+
+  update() {
+    this.personaService.updatePersona(this.route.snapshot.params.dni, this.persona).subscribe();
+  }
+
+
+  onSubmit(){
+    this.update();
+    this.location.go("/listaPersona");
   }
  
 }

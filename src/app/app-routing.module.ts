@@ -5,6 +5,7 @@ import { CreatePersonaComponent } from './Persona/create-persona/create-persona.
 import { AlumnoListComponent } from './Alumno/alumno-list/alumno-list.component';
 import { CreateAlumnoComponent } from './Alumno/create-alumno/create-alumno.component';
 import { ReadPersonaComponent } from './Persona/read-persona/read-persona.component';
+import { AlumnoDetailsComponent } from './Alumno/alumno-details/alumno-details.component';
 
 
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'listaAlumno', component: AlumnoListComponent },
   { path: 'crearAlumno', component: CreateAlumnoComponent },
   { path: 'personaBuscada/:dni', component: ReadPersonaComponent},
+  { path: 'alumnoBuscado/:dni', component: AlumnoDetailsComponent},
   
 ];
 

@@ -27,8 +27,8 @@
                   <td>{{persona.direccionnum}}</td>
                   <td>{{persona.telefono}}</td>
                   <td>{{persona.varon}}</td>
-                  <td><a [routerLink]="[ '/personaBuscada', persona.dni ]"><button>Datos</button></a></td>
-                  <td><button (click)="deletePersona(persona.dni)">Delete</button></td>
+                  <td><a [routerLink]="[ '/personaBuscada', persona.dni ]"><button id="datos{{persona.dni}}">Datos</button></a></td>
+                  <td><button  id="delete{{persona.dni}}" (click)="deletePersona(persona.dni)">Delete</button></td>
               </tr>
           </tbody>
       </table>

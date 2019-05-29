@@ -14,7 +14,7 @@
               <tr *ngFor="let alumno of alumnos | async">
                   <td>{{alumno.dni}}</td>
                   <td>{{alumno.idalumno}}</td>
-                  <td><button (click)="deleteAlumno(alumno.dni)">Delete</button></td>
+                  <td><a [routerLink]="[ '/alumnoBuscado', alumno.dni ]"><button>Datos</button></a></td>
               </tr>
           </tbody>
       </table>
